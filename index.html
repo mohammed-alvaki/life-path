@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Path</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel='stylesheet' id='bootstrap-icons-css'
+        href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css?ver=1.10.5' media='all' />
+
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- fancy box -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css?ver=5.0.0">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marhey:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;600;700&family=Lemonada:wght@300..700&family=Marhey:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        :root {
+            --gray-color: rgb(242, 240, 240);
+            --gold-color: #ebc548;
+        }
+
+        body {
+            scroll-behavior: smooth;
+            font-family: "Marhey", sans-serif;
+        }
+
+        /* -------- hero section -------- */
+
+        header {
+            background-color: var(--gray-color);
+            padding: 5px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .logo-icon {
+            width: 3.5rem;
+        }
+
+        .logo {
+            width: 9rem;
+        }
+
+        strong {
+            color: var(--gold-color);
+        }
+
+        .hero-section {
+            background-image: url("./imgs/sm-background.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .hero-section h1 {
+            color: var(--gold-color);
+        }
+
+        .btn-contact {
+            background-color: var(--gold-color) !important;
+            transition: all 0.3s linear;
+        }
+
+        .btn-contact:hover {
+            background-color: gold !important;
+        }
+
+        .hero-section .img-container {
+            max-width: 350px;
+            border: 10px solid var(--gold-color);
+            box-shadow: 0 0 50px 15px rgb(238, 221, 126) inset;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .hero-section p {
+            font-family: "Harmattan", sans-serif;
+            opacity: 0.7;
+        }
+
+        .hero-section .right-part {
+            margin-top: 100px;
+        }
+
+        form {
+            border: 1px solid;
+            border-radius: 10px;
+            padding: 15px 15px 100px 15px;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        textarea {
+            padding: 5px;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            resize: none;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: var(--gold-color);
+            outline: 1px solid var(--gold-color) !important;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: rgba(0, 0, 0, 0.3);
+        }
+
+        .sendBtn {
+            background-color: var(--gold-color);
+            border: none;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s linear;
+        }
+
+        .sendBtn:hover {
+            background-color: gold;
+        }
+
+        label {
+            color: var(--gold-color);
+        }
+
+        @media (min-width:768px) {
+            .hero-section .img-container {
+                max-width: 250px;
+            }
+
+            .hero-section p {
+                line-height: 35px;
+            }
+
+            .form-container {
+                margin-top: 100px;
+            }
+
+            @media (min-width:1200px) {
+                .hero-section {
+                    height: 100vh;
+                    background-image: url("./imgs/background.jpeg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                .form-container {
+                    margin-top: 30px;
+                }
+            }
+
+        }
+
+        /* -------- services section -------- */
+        .services-section {
+            background-image: url("./imgs/services.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            width: 100%;
+        }
+
+
+        .services-layer {
+            padding: 100px 0 70px;
+            background-color: rgba(159, 121, 83, 0.3);
+        }
+
+
+        .services-section h2 {
+            color: var(--gold-color);
+            position: relative;
+        }
+
+        .services-section h2::after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            background-color: var(--gold-color);
+            transform: translateX(-50%);
+            height: 3px;
+            width: 50px;
+            border-radius: 3px;
+        }
+
+
+        .services-section h3 {
+            color: gray;
+        }
+
+        .services-section .myCard {
+            width: 100%;
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            border-radius: 20px;
+            background-color: white;
+            box-shadow: 0 0 70px 20px rgb(201, 195, 195) inset;
+        }
+
+        .services-section .swiper-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--gold-color);
+        }
+
+        .services-section img {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .services-section :where(.pw-new-next, .pw-new-prev) {
+            color: blue;
+        }
+
+        .bi {
+            color: var(--gold-color);
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: var(--gold-color);
+        }
+
+        /* ------- after-before section ------- */
+        .after-before-section {
+            background-image: linear-gradient(135deg, var(--gold-color) 0%, var(--gold-color) 50%, white 50%);
+            background-size: cover;
+            width: 100%;
+        }
+
+        .after-before-layer {
+            padding: 60px 0;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .after-before-section h2 {
+            color: white;
+            position: relative;
+        }
+
+        .after-before-section h2::after {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            background-color: white;
+            transform: translateX(-50%);
+            height: 3px;
+            width: 50px;
+            border-radius: 3px;
+        }
+
+        .after-before-section .swiper-img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .after-before-section .swiper-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        /* --------- video-form section -------- */
+        .video-form-section {
+            padding: 70px 0;
+            background-image: url('./imgs/bg-hm.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .video-form-section h2 {
+            color: var(--gold-color);
+            position: relative;
+        }
+
+        .video-form-section h2::after {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            background-color: var(--gold-color);
+            transform: translateX(-50%);
+            height: 3px;
+            width: 50px;
+            border-radius: 3px;
+        }
+
+        .ipad-frame {
+            background-image: url('./imgs/vid.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 450px;
+            border: 5px solid #ddd;
+            border-radius: 40px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-form-section i {
+            font-size: 6rem;
+            opacity: 0.8;
+            transition: all 0.4s;
+            border-radius: 50%;
+        }
+
+        .video-form-section i:hover {
+            opacity: 1;
+        }
+
+        /* -------- opinions section -------- */
+        .opinions-section {
+            background-image: url("./imgs/opinions.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            width: 100%;
+        }
+
+        .opinions-layer {
+            padding: 30px 0;
+            background-color: rgba(159, 121, 83, 0.3);
+        }
+
+        .pw-box {
+            max-width: 340px;
+        }
+
+        .opinions-section h2 {
+            color: var(--gold-color);
+            position: relative;
+        }
+
+        .opinions-section h2::after {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            background-color: var(--gold-color);
+            transform: translateX(-50%);
+            height: 3px;
+            width: 50px;
+            border-radius: 3px;
+        }
+
+        .opinions-section .swiper-img {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .opinions-section .swiper-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* --------- footer --------- */
+        footer {
+            padding: 70px 0;
+        }
+
+        footer i {
+            color: var(--gold-color);
+            font-size: 30px;
+            transition: all 0.2s linear;
+        }
+
+        .footer-logo {
+            width: 200px;
+        }
+
+        footer .social-media a i:hover {
+            transform: scale(1.2);
+            color: gold;
+        }
+
+        footer .links a {
+            color: var(--gold-color);
+            transition: all 0.3s;
+        }
+
+        footer hr {
+            height: 2px;
+            background-image: linear-gradient(to right, transparent, goldenrod, transparent) !important;
+            border-radius: 3px;
+            width: 100%;
+        }
+
+        footer p {
+            font-family: "Harmattan", sans-serif;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="#" class="d-lg-none"><img class="logo-icon" src="./imgs/logo-icon.png"
+                                alt="logo-icon"></a>
+
+                        <a href="#" class="d-none d-lg-block"><img class="logo" src="./imgs/logo.png" alt="logo"></a>
+
+                        <P class="d-none d-lg-block fs-4 m-0">في <strong>Lifepath Clinic</strong> نجعل جمالك يروي قصتك
+                        </P>
+                        <a href="tel:+905524300222" class="btn-contact btn"> اتصل بنا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- ----------- hero section --------- -->
+        <section id="hero-section" class="hero-section pb-5 pb-xl-0">
+            <div class="container h-100">
+                <div class="row justify-content-center align-items-center h-100">
+                    <div class="col-11 col-md-6 d-xl-none">
+                        <div class="right-part d-flex flex-column mb-5 mb-md-0">
+                            <div class="up-part text-center mb-3">
+                                <h1 class="mb-3">لايف باث</h1>
+                                <p class="fs-3">اكتشفي جمالك الحقيقي مع أحدث تقنيات التجميل لدينا، وامنحي بشرتك النضارة
+                                    والإشراق.
+                                    لأنك تستحقين الأفضل في كل يوم.
+                                </p>
+                            </div>
+                            <div class="img-container align-self-center"><img class="w-100 h-100" src="./imgs/girl.png"
+                                    alt="background">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-11 col-md-6  col-xl-4 ms-xl-auto h-100">
+                        <div class="form-container h-100 d-flex justify-content-center align-items-center">
+                            <form action="" class="d-flex flex-column w-100 gap-3">
+                                <label>استشارة مجانية</label>
+                                <input type="text" placeholder="الاسم الكامل">
+                                <input type="text" placeholder="العمر">
+                                <input type="tel" placeholder="رقم الهاتف" class="text-start">
+                                <textarea rows="3" placeholder="رسالة"></textarea>
+                                <input type="button" class="sendBtn" value="إرسال">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--  ------ services section ------ -->
+        <section class="services-section">
+            <div class="services-layer">
+                <h2 class="mb-5 text-center">خدماتنا</h2>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-md-1 col-lg-1">
+                            <div class="pw-new-next1 text-end d-none d-md-block fs-2">
+                                <i class="bi bi-arrow-right-circle"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-10">
+                            <div class="swiper newSwiper1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="myCard">
+                                                <div class="swiper-img"><img data-fancybox="gallery-services"
+                                                        src="./imgs/hair.webp" alt="image">
+                                                </div>
+                                                <h3>زراعة الشعر</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="myCard">
+                                                <div class="swiper-img"><img data-fancybox="gallery-services"
+                                                        src="./imgs/obesity.jpg" alt="image"></div>
+                                                <h3>علاج السمنة</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="myCard">
+                                                <div class="swiper-img"><img data-fancybox="gallery-services"
+                                                        src="./imgs/face.jpg" alt="image"></div>
+                                                <h3>تجميل الوجه</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="myCard">
+                                                <div class="swiper-img"><img data-fancybox="gallery-services"
+                                                        src="./imgs/teeth.webp" alt="image"></div>
+                                                <h3>تجميل الاسنان</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="myCard">
+                                                <div class="swiper-img"><img data-fancybox="gallery-services"
+                                                        src="./imgs/lens.jpg" alt="image"></div>
+                                                <h3>ليزك العيون</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="myCard">
+                                                <div class="swiper-img"><img data-fancybox="gallery-services"
+                                                        src="./imgs/body.jpg" alt="image"></div>
+                                                <h3>تجميل الجسم</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-1 col-lg-1">
+                            <div class="pw-new-prev1 text-start d-none d-md-block fs-2">
+                                <i class="bi bi-arrow-left-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5 mt-2">
+                        <div class="col-3 col-md-4">
+                            <div class="pw-new-prev1 text-start d-md-none fs-2">
+                                <i class="bi bi-arrow-right-circle"></i>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="text-center">
+                                <div class="pw-new-pagination1"></div>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-4">
+                            <div class="pw-new-next1 text-end d-md-none fs-2">
+                                <i class="bi bi-arrow-left-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ------ after-before section --------- -->
+        <section class="after-before-section">
+            <div class="after-before-layer">
+                <h2 class="mb-5 text-center">قبل و بعد</h2>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-md-1 col-lg-1">
+                            <div class="pw-new-prev2 text-end d-none d-md-block fs-2">
+                                <i class="bi bi-arrow-right-circle-fill"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-10">
+                            <div class="swiper newSwiper2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="swiper-img"><img data-fancybox="gallery-AB"
+                                                    src="./imgs/obesity-surgery-1.jpeg" alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="swiper-img"><img data-fancybox="gallery-AB"
+                                                    src="./imgs/obesity-surgery-2.jpeg" alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="swiper-img"><img data-fancybox="gallery-AB"
+                                                    src="./imgs/obesity-surgery-3.jpeg" alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="swiper-img"><img data-fancybox="gallery-AB"
+                                                    src="./imgs/obesity-surgery-4.jpeg" alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="swiper-img"><img data-fancybox="gallery-AB"
+                                                    src="./imgs/obesity-surgery-5.jpeg" alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="swiper-img"><img data-fancybox="gallery-AB"
+                                                    src="./imgs/obesity-surgery-6.jpeg" alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="swiper-img"><img data-fancybox="gallery-AB"
+                                                    src="./imgs/obesity-surgery-7.jpeg" alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-1 col-lg-1">
+                            <div class="pw-new-next2 text-start d-none d-md-block fs-2">
+                                <i class="bi bi-arrow-left-circle-fill text-light"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5 mt-2">
+                        <div class="col-3 col-md-4">
+                            <div class="pw-new-prev2 text-start d-md-none fs-2">
+                                <i class="bi bi-arrow-right-circle-fill"></i>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="text-center">
+                                <div class="pw-new-pagination2"></div>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-4">
+                            <div class="pw-new-next2 text-end d-md-none fs-2">
+                                <i class="bi bi-arrow-left-circle-fill text-light"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- --------- video-form section ---------- -->
+        <section id="video-form-section" class="video-form-section">
+            <h2 class="text-center mb-5">اتصل بنا</h2>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-11 col-sm-10 col-md-5 col-xl-6">
+                        <div class="ipad-frame mb-5 mb-lg-0 d-flex justify-content-center align-items-center">
+                            <a href="https://www.youtube.com/embed/wI4g21__5ts?si=D-tHdURApfJsJt9e"
+                                data-fancybox="gallery-video"><i class="fa-solid fa-circle-play"
+                                    style="color: #FFD43B;"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-11 col-sm-10 col-md-5 col-xl-4">
+                        <div>
+                            <form action="" class="d-flex flex-column w-100 gap-3">
+                                <label>استشارة مجانية</label>
+                                <input type="text" placeholder="الاسم الكامل">
+                                <input type="text" placeholder="العمر">
+                                <input type="tel" placeholder="رقم الهاتف" class="text-start">
+                                <textarea rows="3" placeholder="رسالة"></textarea>
+                                <input type="button" class="sendBtn" value="إرسال">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ------ opinions section --------- -->
+        <section class="opinions-section">
+            <div class="opinions-layer">
+                <h2 class="mb-5 text-center">آراء العملاء</h2>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-md-1 col-lg-1">
+                            <div class="pw-new-prev3 text-end d-none d-md-block fs-2">
+                                <i class="bi bi-arrow-right-square"></i>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-10 col-lg-10">
+                            <div class="swiper newSwiper3">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="swiper-img"><img data-fancybox="gallery-opinions"
+                                                    src="./imgs/feedback-1.jpeg" alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="swiper-img"><img data-fancybox="gallery-opinions"
+                                                    src="./imgs/feeback-2.jpeg" alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="swiper-img"><img data-fancybox="gallery-opinions"
+                                                    src="./imgs/feeback-3.jpeg" alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="swiper-img"><img data-fancybox="gallery-opinions"
+                                                    src="./imgs/feeback-4.jpeg" alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="swiper-img"><img data-fancybox="gallery-opinions"
+                                                    src="./imgs/feedback-5.jpeg" alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="swiper-img"><img data-fancybox="gallery-opinions"
+                                                    src="./imgs/feeback-6.jpeg" alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="pw-box">
+                                            <div class="swiper-img"><img src="./imgs/feeback-7.jpg" alt="image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-1 col-lg-1">
+                            <div class="pw-new-next3 text-start d-none d-md-block fs-2">
+                                <i class="bi bi-arrow-left-square"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5 mt-2">
+                        <div class="col-3 col-md-4">
+                            <div class="pw-new-prev3 text-start d-md-none fs-2">
+                                <i class="bi bi-arrow-right-square"></i>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="text-center">
+                                <div class="pw-new-pagination3"></div>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-4">
+                            <div class="pw-new-next3 text-end d-md-none fs-2">
+                                <i class="bi bi-arrow-left-square"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <div class="footer-logo w-100">
+                        <a href="#"> <img class="footer-logo" src="./imgs/logo.png" alt="logo"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div
+                        class="links d-flex flex-column align-items-center align-items-md-start flex-md-row justify-content-center gap-3 gap-md-5  mt-4">
+                        <a class="text-decoration-none d-flex align-items-center"
+                            href="mailto:info@lifepathclinic.com"><i class="fas fa-envelope me-2"></i>
+                            البريد الالكتروني</a>
+                        <a class="text-decoration-none d-flex align-items-center"
+                            href="https://lifepathclinic.com/privacy-policy-2/">
+                            <i class="fa-solid fa-shield-halved me-2"></i>سياسة
+                            الخصوصية
+                        </a>
+                        <a class="text-decoration-none d-flex align-items-center" href="https://lifepathclinic.com/"><i
+                                class="fas fa-globe me-2"></i>الموقع الالكتروني</a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="social-media mt-4 d-flex flex-column align-items-center">
+                        <div class="d-flex gap-3">
+                            <a href="https://www.facebook.com/lifepathclininc" target="_blank"><i
+                                    class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/lifepath_clinic/" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://x.com/Pathlifeclinic" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                            <a href="tel:+905524300222"><i class="fas fa-phone"></i></a>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-12">
+                    <p class="text-center fs-3 mb-0">
+                        © جميع الحقوق محفوظة <strong>Lifepath Clinic</strong> | عمليات التجميل في اسطنبول
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ----- fancy box ----- -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js?ver=5.0.0"></script>
+    <!-- Initialize -->
+    <script>
+        Fancybox.bind("[data-fancybox]", {});
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper services -->
+    <script>
+        var swiper1 = new Swiper(".newSwiper1", {
+            loop: true,
+            slidesPerView: 1.3,
+            spaceBetween: 5,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".pw-new-pagination1",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".pw-new-next1",
+                prevEl: ".pw-new-prev1",
+            },
+            breakpoints: {
+                500: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                },
+                992: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                    centeredSlides: true,
+                },
+                1400: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                    centeredSlides: true,
+                },
+            },
+        });
+    </script>
+
+    <!-- Initialize Swiper after-before -->
+    <script>
+        var swiper2 = new Swiper(".newSwiper2", {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 5,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".pw-new-pagination2",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".pw-new-next2",
+                prevEl: ".pw-new-prev2",
+            },
+            breakpoints: {
+                400: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    centeredSlides: true,
+
+                },
+                992: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                    centeredSlides: true,
+
+                },
+                1400: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 20,
+                    centeredSlides: true,
+                },
+            },
+        });
+    </script>
+
+    <!-- Initialize Swiper opinions -->
+    <script>
+        var swiper3 = new Swiper(".newSwiper3", {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 5,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".pw-new-pagination3",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".pw-new-next3",
+                prevEl: ".pw-new-prev3",
+            },
+            breakpoints: {
+                400: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                },
+                992: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                    centeredSlides: true,
+                },
+                1400: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                    centeredSlides: true,
+                },
+            },
+        });
+    </script>
+
+</body>
+
+</html>
